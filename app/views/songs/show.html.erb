@@ -1,0 +1,26 @@
+<!-- <iframe src="<%#= @song.sporify_url %>" width="400" height="480" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Song name:</strong>
+  <%= @song.song_name %>
+</p>
+
+<p>
+  <strong>Lyrics:</strong>
+  <%= @song.lyrics %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @song.image_url %>
+</p>
+
+<p>
+  <strong>Sporify url:</strong>
+  <%= @song.sporify_url %>
+</p>
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
