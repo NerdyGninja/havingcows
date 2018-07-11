@@ -10,15 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_11_164521) do
-
-  create_table "musics", force: :cascade do |t|
-    t.string "song_name"
-    t.string "lyrics"
-    t.string "image_url"
-    t.string "spotify_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
