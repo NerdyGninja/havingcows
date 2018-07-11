@@ -1,5 +1,25 @@
-<nav>
-  <ul>
-    <li><%= link_to "Home", root_path %></li>
-  </ul>
+<nav class="navbar navbar-dark navbar-expand-xs fixed-top">
+  <!-- Brand -->
+  <%= link_to image_tag('having-cows-logo.png'), class: 'navbar-brand' %>
+  <!-- Toggler -->
+  <span class="navbar-toggler-icon" onclick="openNav()"></span>
+
+  <!-- The overlay -->
+  <div id="overlay-nav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">Home</a>
+      <a href="#">Biography</a>
+      <a href="#">Videos</a>
+      <a href="#">Pictures</a>
+      <a href="#">Events</a>
+      <a href="#">Merch</a>
+      <a href="#">Contact</a>
+    </div>
+
+  </div> <!-- end overlayNav -->
 </nav>

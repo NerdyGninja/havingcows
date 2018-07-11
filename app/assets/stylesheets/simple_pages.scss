@@ -1,3 +1,67 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+///////////////////////////////////////////
+////////////////TYPOGRAPHY////////////////
+/////////////////////////////////////////
+
+#landing-img {
+	width: 100%;
+}
+
+#parallax-biography {
+	background-image: asset-url('having-cows-parallax-biography.jpg');
+}
+
+#parallax-discography {
+	background-image: asset-url('having-cows-parallax-discography.jpg')
+}
+
+#parallax-videos {
+	background-image: asset-url('having-cows-parallax-videos.jpg')
+}
+
+#parallax-events {
+	background-image: asset-url('having-cows-parallax-events.jpg')
+}
+
+#parallax-merch {
+	background-image: asset-url('having-cows-parallax-merch.jpg')
+}
+
+#parallax-contact {
+	background-image: asset-url('having-cows-parallax-contact.jpg')
+}
+
+
+.parallax {
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: relative;
+	width: 100%;
+	height: 200px;
+}
+
+.parallax-header {
+	width: 100%;
+  position: absolute;
+  top: 70px;
+  color: white;
+}
+
+.paralax > h1 {
+	margin: auto;
+}
+
+.biography-text {
+	margin: 90px 50px 50px;
+}
+
+.card {
+margin: 0 auto 30px;
+	width: 200px;
+}

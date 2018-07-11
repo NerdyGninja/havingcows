@@ -13,5 +13,26 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery3
+//= require jquery
 //= require_tree .
+
+/****************************************
+***************Navigation****************
+****************************************/
+
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("overlay-nav").style.height = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("overlay-nav").style.height = "0%";
+}
+
+/****************************************
+**************Complete Load**************
+****************************************/
+$(document).on('turbolinks:load', function() {
+
+});
