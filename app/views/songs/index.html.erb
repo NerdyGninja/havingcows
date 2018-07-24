@@ -6,9 +6,9 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Image</th>
+      <th>Spotify link</th>
       <th>Lyrics</th>
-      <th>Image url</th>
-      <th>Song source</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +17,9 @@
     <% @songs.each do |song| %>
       <tr>
         <td><%= song.name %></td>
+        <td><%= song.image %></td>
+        <td><%= song.spotify_link %></td>
         <td><%= song.lyrics %></td>
-        <td><%= song.image_url %></td>
-        <td><%= song.song_source %></td>
         <td><%= link_to 'Show', song %></td>
         <td><%= link_to 'Edit', edit_song_path(song) %></td>
         <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>

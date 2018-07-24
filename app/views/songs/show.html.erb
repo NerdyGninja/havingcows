@@ -1,27 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no"
-  src="<%= @song.song_source %>//api.soundcloud.com/tracks/293&amp;{ ADD YOUR PARAMETERS HERE }">
-</iframe>
-
 <p>
   <strong>Name:</strong>
   <%= @song.name %>
 </p>
 
 <p>
+  <strong>Image:</strong>
+  <%= @song.image %>
+</p>
+
+<p>
+  <strong>Spotify link:</strong>
+  <%= @song.spotify_link %>
+</p>
+
+<p>
   <strong>Lyrics:</strong>
   <%= @song.lyrics %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @song.image_url %>
-</p>
-
-<p>
-  <strong>Song source:</strong>
-  <%= @song.song_source %>
 </p>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
