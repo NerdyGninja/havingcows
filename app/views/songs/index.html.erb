@@ -2,32 +2,18 @@
 
 <h1>Songs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Spotify link</th>
-      <th>Lyrics</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container-fluid">
+  <div class="row">
     <% @songs.each do |song| %>
-      <tr>
-        <td><%= song.name %></td>
-        <td><%= song.image %></td>
-        <td><%= song.spotify_link %></td>
-        <td><%= song.lyrics %></td>
-        <td><%= link_to 'Show', song %></td>
-        <td><%= link_to 'Edit', edit_song_path(song) %></td>
-        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="col-sm-2 col-md-4">
+        <%= link_to (song.name), song %>
+        <%= image_tag (song.image), class: 'img-responsive' %>
+        <%= link_to 'Edit', edit_song_path(song) %>
+        <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div><!-- /col -->
     <% end %>
-  </tbody>
-</table>
-
+  </div>
+</div>
 <br>
 
 <%= link_to 'New Song', new_song_path %>
