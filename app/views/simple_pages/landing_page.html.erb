@@ -1,6 +1,6 @@
 <section>
   <!-- background image for landing page -->
-<%= image_tag ('having-cows-jumbotron.jpg'), id: 'landing-img' %>
+  <%= image_tag ('having-cows-jumbotron.jpg'), id: 'landing-img' %>
 </section>
 
 <section>
@@ -17,41 +17,41 @@
     <p>The band has been together <strong>since 2013</strong> consisting of 3 members playing, 1 acoustic and 1 electric guitar and a kick-ass drum beat. At the end of 2013 they decided to evolve their own creativity by starting to write their own music and gigging all around Bloemfontein as they are <strong>a proud Bloem local based act</strong>.</p><p>As recent as June 2014 they released a studio recorded EP named <strong>‘ABIUA’</strong> and from there on promoted towards the project while finding themselves the number one alternative act in Bloemfontein on <strong>Reverbnation</strong>. ‘Die Mystic Boer’ has also announced Having Cows the number one ‘up and coming’ band for 2014 by <strong>winning the Crooked Boer Sessions</strong> in August 2014 and received a partial recording contract to share a compilation CD with fellow great Bloem bands.</p><p>Since November 2015 the band has evolved into the four piece line-up that they find themselves in currently, moving more towards the ‘plugged-in’ vibe doing full band shows. Classified as an <strong>indie band with a twitch of breaking the rules</strong> here and there, the guys from Having Cows play gigs all over South Africa. Proudly opening for local S.A. favourites like <strong>'aKING', ‘Monark’, ‘Moses&nbsp;Metro Man’, ‘Elvis Blue’ and ‘Shortstraw’</strong> in between gigging numerous shows in the city of roses as they stand well known for locally.</p><p>The band has enjoyed some radio play on Tuks FM with the single ‘A Beat In Us All’ off the ABIUA EP in early 2015 and entered the <strong>Tuks FM top 30</strong> charts while sticking around there for 12 weeks on-going peaking at <strong>number 11</strong>. Released on February 2016, they released ‘Tryna Be Lawful’ as a single track which has also been kindly received by <strong>Tuks FM, Kovsie FM and PUK FM</strong> and can be found on these radio stations’ rotational playlists.</p><p>Taking the bigger step towards recording at a more well-known production studio, they worked with <strong>Greg Carlin (Zebra & Giraffe)</strong> at OpenRoom Production studios with Greg producing their single ‘So Much To Gain’. The song was released in late April 2017 through MiniBeast Records as the official distributors.</p><p>Be sure to find the band on any social media platforms and gigging around wherever they are.</p>
   </div> <!-- end biography text -->
 
-<div class="container">
-  <div class="meet-the-band">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card">
-          <%= image_tag ('ralf-swart.jpg'), class: 'card-img-top img-fluid' %>
-          <div class="card-body">
-            <h5 class="card-title">Ralf Swart</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Singing the Songs</h6>
-            <p class="card-text">Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf.</p>
+  <div class="container">
+    <div class="meet-the-band">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+            <%= image_tag ('ralf-swart.jpg'), class: 'card-img-top img-fluid' %>
+            <div class="card-body">
+              <h5 class="card-title">Ralf Swart</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Singing the Songs</h6>
+              <p class="card-text">Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf Ralf.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card">
-          <%= image_tag ('gavin-coetser.jpg'), class: 'card-img-top img-fluid' %>
-          <div class="card-body">
-            <h5 class="card-title">Gavin Coetser</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Slappin' The Bass</h6>
-            <p class="card-text">Gavin Gavin Gavin Gavin Gavin Gavin Gavin Gavin Gavin.</p>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+            <%= image_tag ('gavin-coetser.jpg'), class: 'card-img-top img-fluid' %>
+            <div class="card-body">
+              <h5 class="card-title">Gavin Coetser</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Slappin' The Bass</h6>
+              <p class="card-text">Gavin Gavin Gavin Gavin Gavin Gavin Gavin Gavin Gavin.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card">
-          <%= image_tag ('koos-le-roux.jpg'), class: 'card-img-top img-fluid' %>
-          <div class="card-body">
-            <h5 class="card-title">Koos le Roux</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Beating the Drums</h6>
-            <p class="card-text">Koos Koos Koos Koos Koos Koos Koos Koos Koos.</p>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+            <%= image_tag ('koos-le-roux.jpg'), class: 'card-img-top img-fluid' %>
+            <div class="card-body">
+              <h5 class="card-title">Koos le Roux</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Beating the Drums</h6>
+              <p class="card-text">Koos Koos Koos Koos Koos Koos Koos Koos Koos.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </section>
 
@@ -64,7 +64,35 @@
   </div>
 </section>
 
-<%#= @featured_song.image %>
+<div class="carousel slide" id="discography-carousel" data-ride="carousel" data-interval="4000" data-pause="false">
+  <div class="carousel-inner">
+
+    <!-- CAROUSEL INDICATORS -->
+    <ol class="carousel-indicators">
+      <% @featured_songs.each_with_index do |song, i| %>
+      <li data-target="discography-carousel" data-slide-to="<%= i %>"" class="<%= "active" if i == 0 %>">
+      </li>
+      <% end %>
+    </ol>
+    
+    <!-- WRAPPER FOR SLIDES -->
+    <% @featured_songs.each do |song| %>
+    <div class="carousel-item <%= "active" if song == @featured_songs.first %>">
+      <%= image_tag (song.image), class: 'd-block img-fluid', alt: 'carousel' %>
+    </div>
+    <% end %>
+  </div>
+
+  <!-- CAROUSEL CONTROLS -->
+  <a class="carousel-control-prev" href="#discography-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#discography-carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 <section>
   <div id="parallax-videos" class="parallax">
@@ -75,9 +103,30 @@
   </div>
 </section>
 
-<section>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, nulla, nisi. Officia recusandae ab molestias est, sed distinctio hic optio totam nostrum, illo dolorem asperiores. Temporibus nisi quisquam rerum, eum!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat a eligendi error consequatur obcaecati! Beatae molestiae, illum ratione, fugit odio necessitatibus qui culpa facere officiis veniam reiciendis quae consequuntur assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat consequuntur magnam odit delectus magni repellendus blanditiis similique consequatur. Magnam id, eligendi porro amet maiores consequuntur tempore, rem! Sed, velit, provident!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium aperiam beatae nulla quisquam commodi dolorem vitae quasi debitis repudiandae voluptatum, repellendus incidunt sequi, facilis eos aliquid, fugiat optio illum doloribus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat commodi laudantium tempore totam similique enim saepe, magnam dolor error sapiente. Accusamus optio veniam sit sunt voluptates cupiditate asperiores laborum, dolorum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia adipisci amet, quis vero, voluptas necessitatibus ducimus et deleniti sapiente aliquid nobis harum. Animi consectetur, commodi reprehenderit accusantium eaque, asperiores ipsum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, deleniti aspernatur dolorem laborum corporis laboriosam quasi, quia esse odit odio delectus harum quo cupiditate ab saepe maiores ut! Iure, neque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam porro similique voluptatum voluptates veniam sequi eos quos numquam perspiciatis, odit pariatur maiores, dignissimos adipisci, quaerat inventore natus dolor animi, unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eligendi laborum praesentium eveniet iusto, excepturi culpa ab! Praesentium, alias aperiam. Nihil, numquam debitis maiores esse molestias, vero veritatis quam modi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eveniet officia, excepturi fuga amet quisquam voluptatibus obcaecati numquam delectus eos, error molestiae deleniti! Vel nesciunt, nisi dolor commodi quibusdam pariatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident sit animi facere voluptatum labore rerum neque dicta, blanditiis corrupti ad, ducimus, pariatur unde corporis suscipit, accusantium molestiae similique reprehenderit atque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla architecto odit culpa ducimus distinctio error quisquam voluptatem placeat eum laudantium enim necessitatibus ipsa cum dignissimos natus delectus, expedita sed.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quisquam sed illo nulla, reiciendis laborum voluptas voluptate id beatae et! Nisi dolorem amet voluptatibus placeat ea rerum non accusantium doloremque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae numquam ad error unde tenetur nam cum explicabo, magni. Iste aliquam, quidem aperiam culpa ea obcaecati tenetur quos animi magnam unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis harum velit, culpa nostrum assumenda dolorum sapiente. Autem laudantium quam placeat accusantium possimus dolorem illo, ipsam sed, ab amet magni commodi!</p>
-</section>
+<!-- <div class="container"> -->
+  <!-- <div class="row"> -->
+    <!-- <div class="col-xs-12 col-sm-6 col-lg-6"> -->
+      <!-- <div class="embed-container"> -->
+        <!-- <iframe src='https://www.youtube.com/embed//JpKguO2JwRs' frameborder='0' allowfullscreen></iframe> -->
+      <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="col-xs-12 col-sm-6 col-lg-6"> -->
+      <!-- <div class="embed-container"> -->
+        <!-- <iframe src='https://www.youtube.com/embed//JepN68-cJWo' frameborder='0' allowfullscreen></iframe> -->
+      <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="col-xs-12 col-sm-6 col-lg-6"> -->
+      <!-- <div class="embed-container"> -->
+        <!-- <iframe src='https://www.youtube.com/embed//gY2kbJ7gQwY' frameborder='0' allowfullscreen></iframe> -->
+      <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="col-xs-12 col-sm-6 col-lg-6"> -->
+      <!-- <div class="embed-container"> -->
+        <!-- <iframe src='https://www.youtube.com/embed//KtDdNEiYhiI' frameborder='0' allowfullscreen></iframe> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> --> <!-- end row -->
+<!-- </div> --> <!-- end container -->
 
 <section>
   <div id="parallax-events" class="parallax">

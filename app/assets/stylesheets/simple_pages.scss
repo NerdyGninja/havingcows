@@ -16,23 +16,23 @@
 }
 
 #parallax-discography {
-	background-image: asset-url('having-cows-parallax-discography.jpg')
+	background-image: asset-url('having-cows-parallax-discography.jpg');
 }
 
 #parallax-videos {
-	background-image: asset-url('having-cows-parallax-videos.jpg')
+	background-image: asset-url('having-cows-parallax-videos.jpg');
 }
 
 #parallax-events {
-	background-image: asset-url('having-cows-parallax-events.jpg')
+	background-image: asset-url('having-cows-parallax-events.jpg');
 }
 
 #parallax-merch {
-	background-image: asset-url('having-cows-parallax-merch.jpg')
+	background-image: asset-url('having-cows-parallax-merch.jpg');
 }
 
 #parallax-contact {
-	background-image: asset-url('having-cows-parallax-contact.jpg')
+	background-image: asset-url('having-cows-parallax-contact.jpg');
 }
 
 
@@ -64,4 +64,23 @@
 .card {
 margin: 0 auto 30px;
 	width: 200px;
+}
+
+////////////////////////////
+/////////CAROUSEL///////////
+////////////////////////////
+
+#discography-carousel {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-image: asset-url('discography-background.jpg');
+	background-size: cover;
+	background-position: top;
+}
+
+.carousel-inner img {
+  max-height: 325px;
+  min-height: 325px;
+  display: block;
+  margin: auto;
 }

@@ -7,7 +7,7 @@
     <% @songs.each do |song| %>
       <div class="col-sm-2 col-md-4">
         <%= link_to (song.name), song %>
-        <%= image_tag (song.image), class: 'img-responsive' %>
+        <%= image_tag (song.image) %>
         <%= link_to 'Edit', edit_song_path(song) %>
         <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div><!-- /col -->
