@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :videos
   resources :songs
 	#root 'simple_pages#index'
