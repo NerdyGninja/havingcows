@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_24_152158) do
+ActiveRecord::Schema.define(version: 2018_08_17_071425) do
 
   create_table "songs", force: :cascade do |t|
     t.string "name"
     t.string "image"
     t.string "spotify_link"
     t.text "lyrics"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "name"
+    t.string "youtube_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

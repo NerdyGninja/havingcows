@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :videos
   resources :songs
 	#root 'simple_pages#index'
   get 'simple_pages/index'
