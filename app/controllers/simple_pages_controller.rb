@@ -4,6 +4,7 @@ class SimplePagesController < ApplicationController
 		@featured_songs = Song.limit(6)
 		@featured_videos = Video.limit(6)
 		@featured_events = Event.limit(6)
+		@featured_merchandises = Merchandise.limit(4)
 	end
 
 	def thank_you
