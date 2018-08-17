@@ -12,7 +12,7 @@
   </div>
 
   <div class="container">
-    <div class="biography-text text-muted">
+    <div class="biography-text">
       <p>The band has been together <strong>since 2013</strong> consisting of 3 members playing, 1 acoustic and 1 electric guitar and a kick-ass drum beat. At the end of 2013 they decided to evolve their own creativity by starting to write their own music and gigging all around Bloemfontein as they are <strong>a proud Bloem local based act</strong>.</p><p>As recent as June 2014 they released a studio recorded EP named <strong>‘ABIUA’</strong> and from there on promoted towards the project while finding themselves the number one alternative act in Bloemfontein on <strong>Reverbnation</strong>. ‘Die Mystic Boer’ has also announced Having Cows the number one ‘up and coming’ band for 2014 by <strong>winning the Crooked Boer Sessions</strong> in August 2014 and received a partial recording contract to share a compilation CD with fellow great Bloem bands.</p><p>Since November 2015 the band has evolved into the four piece line-up that they find themselves in currently, moving more towards the ‘plugged-in’ vibe doing full band shows. Classified as an <strong>indie band with a twitch of breaking the rules</strong> here and there, the guys from Having Cows play gigs all over South Africa. Proudly opening for local S.A. favourites like <strong>'aKING', ‘Monark’, ‘Moses&nbsp;Metro Man’, ‘Elvis Blue’ and ‘Shortstraw’</strong> in between gigging numerous shows in the city of roses as they stand well known for locally.</p><p>The band has enjoyed some radio play on Tuks FM with the single ‘A Beat In Us All’ off the ABIUA EP in early 2015 and entered the <strong>Tuks FM top 30</strong> charts while sticking around there for 12 weeks on-going peaking at <strong>number 11</strong>. Released on February 2016, they released ‘Tryna Be Lawful’ as a single track which has also been kindly received by <strong>Tuks FM, Kovsie FM and PUK FM</strong> and can be found on these radio stations’ rotational playlists.</p><p>Taking the bigger step towards recording at a more well-known production studio, they worked with <strong>Greg Carlin (Zebra & Giraffe)</strong> at OpenRoom Production studios with Greg producing their single ‘So Much To Gain’. The song was released in late April 2017 through MiniBeast Records as the official distributors.</p><p>Be sure to find the band on any social media platforms and gigging around wherever they are.</p>
     </div> <!-- end biography text -->
 
@@ -61,35 +61,35 @@
     </div>
   </div>
 
-<div class="carousel slide" id="discography-carousel" data-ride="carousel" data-interval="4000" data-pause="false">
-  <div class="carousel-inner">
+  <div class="carousel slide" id="discography-carousel" data-ride="carousel" data-interval="4000" data-pause="false">
+    <div class="carousel-inner">
 
-    <!-- CAROUSEL INDICATORS -->
-    <ol class="carousel-indicators">
-      <% @featured_songs.each_with_index do |song, i| %>
-      <li data-target="discography-carousel" data-slide-to="<%= i %>"" class="<%= "active" if i == 0 %>">
-      </li>
+      <!-- CAROUSEL INDICATORS -->
+      <ol class="carousel-indicators">
+        <% @featured_songs.each_with_index do |song, i| %>
+        <li data-target="discography-carousel" data-slide-to="<%= i %>"" class="<%= "active" if i == 0 %>">
+        </li>
+        <% end %>
+      </ol>
+
+      <!-- WRAPPER FOR SLIDES -->
+      <% @featured_songs.each do |song| %>
+      <div class="carousel-item <%= "active" if song == @featured_songs.first %>">
+        <%= image_tag (song.image), class: 'd-block img-fluid', alt: 'carousel' %>
+      </div>
       <% end %>
-    </ol>
-    
-    <!-- WRAPPER FOR SLIDES -->
-    <% @featured_songs.each do |song| %>
-    <div class="carousel-item <%= "active" if song == @featured_songs.first %>">
-      <%= image_tag (song.image), class: 'd-block img-fluid', alt: 'carousel' %>
     </div>
-    <% end %>
-  </div>
 
-  <!-- CAROUSEL CONTROLS -->
-  <a class="carousel-control-prev" href="#discography-carousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#discography-carousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+    <!-- CAROUSEL CONTROLS -->
+    <a class="carousel-control-prev" href="#discography-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#discography-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </section> <!-- end discography section -->
 
 <section>
@@ -100,17 +100,17 @@
     </div>
   </div>
 
-<div class="container">
-  <div class="row">
-    <% @featured_videos.each do |video| %>
-    <div class="col-xs-12 col-sm-4 col-lg-3">
-      <div class="embed-container">
-        <%= video.youtube_link.html_safe %>
+  <div class="container">
+    <div class="row">
+      <% @featured_videos.each do |video| %>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="embed-container">
+          <%= video.youtube_link.html_safe %>
+        </div>
       </div>
-    </div>
-    <% end %>
-  </div> <!-- end row -->
-</div> <!-- end container -->
+      <% end %>
+    </div> <!-- end row -->
+  </div> <!-- end container -->
 </section> <!-- end videos section -->
 
 <section id="events-section">
@@ -138,7 +138,7 @@
           <td><%= event.event_name %></td>
           <td><%= event.venue %></td>
           <td><%= event.date %></td>
-          <td><%= event.entrance %></td>
+          <td>R<%= event.entrance %></td>
           <td><%= event.tickets_available_at %></td>
         </tr>
         <% end %>
@@ -156,15 +156,32 @@
   </div>
 </section>
 
-<section>
+<section id="contact-section">
   <div id="parallax-contact" class="parallax">
     <!-- background for the paralax effect -->
     <div class="parallax-header text-center">
       <h1>CONTACT US</h1>
     </div>
   </div>
-</section>
 
-<section>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum autem, doloribus odit! Eveniet amet alias ab dolorum perspiciatis? Aliquid suscipit ab illo laboriosam maxime, repellendus quas sint, non eos odit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum officiis omnis quaerat, dolorem, illo facere ea quis voluptates explicabo iste, necessitatibus sit, esse velit veritatis! Hic quia tenetur exercitationem amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae accusamus provident similique labore, minus, asperiores voluptate fuga a eius ex optio excepturi, quibusdam qui vero. Et quibusdam aut, animi officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, eum, ipsam. Corrupti aut perferendis placeat eaque, ducimus commodi accusamus tempore dolores laborum nostrum, error a corporis similique maxime dolor vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque nisi reiciendis nemo molestias sequi voluptatibus debitis aliquid saepe, consectetur, vero accusantium molestiae fugiat, amet officia facilis aspernatur sunt suscipit, temporibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quibusdam aut quaerat, repellat sed, iusto sint consequuntur quia culpa porro, deserunt dolores voluptates ad possimus pariatur dignissimos odit vero explicabo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit, labore harum non quasi ad sint eaque aliquam voluptate dicta, ratione adipisci voluptas repellendus iste dolorum, dolores officia eum illum!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quam! Et, expedita necessitatibus officia, odio error, voluptatem blanditiis vel ipsa optio, quisquam corporis odit? Incidunt impedit aliquam, quae officia suscipit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem iusto minima libero unde aspernatur, neque amet dicta omnis, ipsa modi officiis quos doloribus odio commodi in ad sed sint, quisquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur fuga earum sint molestiae hic, maiores corrupti quae magnam, quos repellendus, commodi totam quidem voluptatem dolore error eaque similique laboriosam voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque repellat velit quam ducimus, similique autem iusto natus alias expedita veritatis nulla itaque. Culpa nostrum aut unde, expedita! Quisquam, expedita, totam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque fugit quidem suscipit delectus, laboriosam, modi sunt at saepe commodi, sed voluptatibus assumenda ea eveniet nobis excepturi! Ullam vero rerum neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio earum autem facere modi architecto neque ipsam, hic veniam laboriosam! Cupiditate quam maiores assumenda illum eveniet, incidunt ab repudiandae ipsum corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nemo, doloribus, saepe repudiandae similique neque eligendi labore dolores quos iure velit, expedita quod eos sequi. Sint, id, suscipit? Quod, saepe!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, eius accusantium alias, temporibus velit fugiat veniam ullam similique hic aliquam autem aliquid officiis at unde! Minus maiores distinctio praesentium, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quod necessitatibus assumenda officiis, facilis praesentium beatae accusamus nesciunt! Fugit asperiores, corporis tempore quibusdam nobis sit ratione temporibus ipsa iste beatae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione modi accusantium neque, tenetur sapiente dolores necessitatibus qui error iure ullam itaque, sequi maxime obcaecati rerum sed natus ipsa aut, delectus!</p>
+  <div class="container">
+    <div class="contact-form">
+      <%= flash[:notice] %>
+      <%= form_tag("/simple_pages/thank_you") do |form| %>
+      <div class="form-group">
+        <%= label_tag :name, "Name", class: "sr-only" %>
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Please enter your name." %>
+      </div> <!-- end form-group -->
+      <div class="form-group">
+        <%= label_tag :email, "Email Address", class: "sr-only" %>
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Please enter your email address." %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :message, "Message", class: "sr-only" %>
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Give us your thoughts." %>
+      </div>
+      <%= submit_tag "Send", class: "btn" %>
+      <% end %>
+    </div>
+  </div>
 </section>

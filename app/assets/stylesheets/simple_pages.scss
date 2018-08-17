@@ -70,14 +70,6 @@ margin: 0 auto 30px;
 /////////CAROUSEL///////////
 ////////////////////////////
 
-#discography-carousel {
-	padding-top: 100px;
-	padding-bottom: 100px;
-	background-image: asset-url('discography-background.jpg');
-	background-size: cover;
-	background-position: top;
-}
-
 .carousel-inner img {
   max-height: 325px;
   min-height: 325px;
@@ -89,10 +81,15 @@ margin: 0 auto 30px;
 ////////EVENTS/////////
 //////////////////////
 
-#events-section {
-	background-color: #ECECEC;
-}
-
 .table {
 	margin-bottom: 0;
+}
+
+
+////////////////////////////
+/////////CONTACT////////////
+////////////////////////////
+
+.contact-form {
+	margin-top: 3rem;
 }
