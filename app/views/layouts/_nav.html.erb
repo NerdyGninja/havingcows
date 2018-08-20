@@ -12,13 +12,13 @@
 
     <!-- Overlay content -->
     <div class="overlay-content">
-      <a href="#">Home</a>
-      <a href="#">Biography</a>
-      <a href="#">Discography</a>
-      <a href="#">Videos</a>
-      <a href="#">Events</a>
-      <a href="#">Merch</a>
-      <a href="#">Contact</a>
+      <%= link_to 'HOME', root_path %>
+      <%= link_to 'BIOGRAPHY', root_path(anchor: 'discography-section') %>
+      <%= link_to 'DISCOGRAPHY', songs_path %>
+      <%= link_to 'VIDEOS', videos_path %>
+      <%= link_to 'EVENTS', root_path(anchor: 'events-section') %>
+      <%= link_to 'MERCH', merchandises_path %>
+      <%= link_to 'CONTACT US', root_path(anchor: 'contact-section') %>
     </div>
 
   </div> <!-- end overlayNav -->
