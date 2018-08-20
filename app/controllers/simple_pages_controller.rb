@@ -7,6 +7,14 @@ class SimplePagesController < ApplicationController
 		@featured_merchandises = Merchandise.limit(4)
 	end
 
+	def download_epk
+  send_file(
+    "#{Rails.root}/public/hc_epk.zip",
+    filename: "Having Cows EPK",
+    type: "application/zip"
+  )
+	end
+
 	def thank_you
 		@name = params[:name]
 		@email = params[:email]
