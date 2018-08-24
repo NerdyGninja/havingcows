@@ -94,7 +94,7 @@
     <div class="row">
       <% @featured_songs.each do |song| %>
       <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 img-grid wrapper">
-        <%= link_to image_tag(song.image, class: 'img-fluid'), song %>
+        <%= link_to image_tag(song.image, class: 'img-fluid song-image'), song %>
         <%= link_to song do %>
         <div class="image-overlay">
           <div class="text-overlay"><%= song.name %></div>
@@ -118,7 +118,7 @@
     <div class="row">
       <% @featured_videos.each do |video| %>
       <!-- MODAL TRIGGER -->
-      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 img-grid">
+      <div class="col-xs-6 col-md-4 img-grid">
         <%= image_tag(video.image, data: { toggle: 'modal', target: '#videoModal', theVideo: video.youtube_link }, class: 'img-fluid video-image') %>
       </div>
       <% end %>
@@ -188,7 +188,7 @@
 </section> <!-- end events section -->
 <br>
 
-<section>
+<section id="merch-section">
   <div id="parallax-merch" class="parallax">
     <!-- background for the paralax effect -->
     <div class="parallax-header text-center">

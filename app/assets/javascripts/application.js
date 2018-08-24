@@ -34,7 +34,7 @@ function closeNav() {
 **************Complete Load**************
 ****************************************/
 $(document).on('turbolinks:load', function() {
-	
+
 autoPlayYouTubeModal();
 
   //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG

@@ -159,17 +159,30 @@
 ////////////////////////
 
 .video-image:hover {
-	cursor: pointer;
+-webkit-box-shadow: 7px 5px 24px 2px rgba(128,130,129,1);
+-moz-box-shadow: 7px 5px 24px 2px rgba(128,130,129,1);
+box-shadow: 7px 5px 24px 2px rgba(128,130,129,1);
 }
+
+////////////////////////
+/////////MERCH//////////
+////////////////////////
 
 /////////CAROUSEL///////////
 
-
 .carousel-inner img {
-  max-height: 325px;
-  min-height: 325px;
+  max-height: 350px;
+  min-height: 350px;
   display: block;
   margin: auto;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23458c5e' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23458c5e' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
 ////////////////////////
