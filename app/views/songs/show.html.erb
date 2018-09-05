@@ -1,3 +1,5 @@
+<div class="clearNav"></div>
+
 <p id="notice"><%= notice %></p>
 
 <%= @song.spotify_link.html_safe %>
@@ -19,7 +21,7 @@
 
 <p>
   <strong>Lyrics:</strong>
-  <%= @song.lyrics %>
+  <%= markdown @song.lyrics %>
 </p>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |

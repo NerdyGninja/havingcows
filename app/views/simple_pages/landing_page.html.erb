@@ -117,11 +117,11 @@
   <div class="container img-grid-container">
     <div class="row">
       <% @featured_videos.each do |video| %>
-      <!-- MODAL TRIGGER -->
       <div class="col-xs-6 col-md-4 img-grid wrapper">
         <%= image_tag (video.image), class: 'img-fluid video-image' %>
         <div class="image-overlay">
           <div class="text-overlay">
+            <!-- MODAL TRIGGER -->
             <span class="far fa-play-circle" data-toggle="modal" data-target="#videoModal" data-theVideo="<%= video.youtube_link %>"></span>
             <p><%= video.name %></p>
           </div>
@@ -185,7 +185,9 @@
       <%= link_to simple_pages_download_epk_url do %>
       <button class="btn btn-custom">DOWNLOAD OUR EPK</button>
       <% end %>
+      <br>
       <span>&amp;</span>
+      <br>
       <%= link_to root_path(anchor: 'contact-section') do %>
       <button class="btn btn-custom">CONTACT US FOR BOOKINGS</button>
       <% end %>
@@ -216,7 +218,11 @@
       <!-- WRAPPER FOR SLIDES -->
       <% @featured_merchandises.each do |merchandise| %>
       <div class="carousel-item <%= "active" if merchandise == @featured_merchandises.first %>">
-        <%= image_tag (merchandise.image_url), class: 'd-block img-fluid', alt: 'carousel' %>
+        <%= link_to image_tag(merchandise.image_url, class: 'd-block img-fluid', alt: 'carousel'), merchandise %>
+      </div>
+      <div class="carousel-caption">
+        <h4><%= merchandise.name %></h4>
+        <p>R <%= merchandise.price %></p>
       </div>
       <% end %>
     </div>
@@ -231,8 +237,14 @@
       <span class="sr-only">Next</span>
     </a>
   </div> <!-- end carousel -->
+<br>
+  <div class="text-center">
+    <%= link_to merchandises_url do %>
+      <button class="btn btn-custom">SHOP ALL</button>
+    <% end %>
+  </div>
 </section> <!-- end merchandise section -->
-
+<br>
 <section id="contact-section">
   <div id="parallax-contact" class="parallax">
     <!-- background for the paralax effect -->

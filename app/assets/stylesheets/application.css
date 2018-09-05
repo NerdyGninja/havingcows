@@ -46,6 +46,9 @@ a:hover {
   text-decoration: none;
 }
 
+.clearNav {
+  padding-top: 50px;
+}
 
 /* Responsive iframe wrapped inside an .embed-container div */
 
