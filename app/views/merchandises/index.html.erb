@@ -1,36 +1,23 @@
 <div class="clearNav"></div>
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="text-center">
+    <p id="notice"><%= notice %></p>
 
-<h1>Merchandises</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Colour</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @merchandises.each do |merchandise| %>
-      <tr>
-        <td><%= merchandise.name %></td>
-        <td><%= merchandise.price %></td>
-        <td><%= merchandise.description %></td>
-        <td><%= merchandise.image_url %></td>
-        <td><%= merchandise.colour %></td>
-        <td><%= link_to 'Show', merchandise %></td>
-        <td><%= link_to 'Edit', edit_merchandise_path(merchandise) %></td>
-        <td><%= link_to 'Destroy', merchandise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+    <h1>Merch</h1>
+    <br>
+    <div class="row">
+      <% @merchandises.each do |merchandise| %>
+      <div class="col-sm-6 col-md-4">
+        <%= link_to image_tag(merchandise.image_url, class: 'img-fluid'), merchandise %>
+        <h4><%= merchandise.name %></h4>
+        <h5>R<%= merchandise.price %></h5>
+        <hr>
+        <%= link_to 'Edit', edit_merchandise_path(merchandise) %>
+        <%= link_to 'Destroy', merchandise, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      <% end %>
+    </div>
 <br>
 
 <%= link_to 'New Merchandise', new_merchandise_path %>
+</div> <!-- end container -->

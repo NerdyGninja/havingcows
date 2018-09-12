@@ -1,21 +1,26 @@
 <div class="clearNav"></div>
 
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="text-center">
 
-<h1>Songs</h1>
+  <p id="notice"><%= notice %></p>
 
-<div class="container-fluid">
+  <h1>Songs</h1>
   <div class="row">
     <% @songs.each do |song| %>
-      <div class="col-sm-2 col-md-4">
-        <%= link_to (song.name), song %>
-        <%= image_tag (song.image) %>
+      <div class="col-sm-6 col-md-4">
+        <div class="index-song" data-aos="flip-up" data-aos-duration="1000">
+          <h4 class="song-title"><%= song.name %></h4>
+        <%= link_to image_tag(song.image, class: 'img-fluid'), song %>
+        </div>
         <%= link_to 'Edit', edit_song_path(song) %>
         <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div><!-- /col -->
     <% end %>
   </div>
 </div>
+
 <br>
 
 <%= link_to 'New Song', new_song_path %>
+</div>

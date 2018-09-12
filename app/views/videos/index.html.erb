@@ -1,31 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="clearNav"></div>
+<div class="container">
+  <div class="text-center">
+    <p id="notice"><%= notice %></p>
 
-<h1>Videos</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Youtube link</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+    <h1>Videos</h1>
+    <div class="row">
+      
     <% @videos.each do |video| %>
-      <tr>
-        <td><%= video.name %></td>
-        <td><%= video.image %></td>
-        <td><%= video.youtube_link %></td>
-        <td><%= link_to 'Show', video %></td>
-        <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="col-sm-6 col-md-4">
+        <div class="index-video" data-aos="flip-down" data-aos-duration="1000">
+    <h4><%= video.name %></h4> 
+    <%= link_to image_tag(video.image, class: 'img-fluid index-video-image'), video.youtube_link, target: :_blank %>
+    </div>
+    <%= link_to 'Show', video %> 
+    <%= link_to 'Edit', edit_video_path(video) %> 
+    <%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %> 
+</div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
+</div>
+    <br>
+  </div>
+</div>
 <%= link_to 'New Video', new_video_path %>

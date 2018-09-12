@@ -1,37 +1,39 @@
 <%= form_with(model: song, local: true) do |form| %>
-  <% if song.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(song.errors.count, "error") %> prohibited this song from being saved:</h2>
+<% if song.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(song.errors.count, "error") %> prohibited this song from being saved:</h2>
 
-      <ul>
-      <% song.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% song.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+<div class="field">
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
-  </div>
-  <a href="https://developer.spotify.com/documentation/widgets/generate/play-button/" target="_blank">TO GET SPOTIFY LINK (copy iframe to iframe)</a>
-  <div class="field">
-    <%= form.label :spotify_link %>
-    <%= form.text_field :spotify_link %>
-  </div>
+<div class="field">
+  <%= form.label :image %>
+  <%= form.text_field :image %>
+  <p>Image Size: Width = 610px | Height = 395px</p>
+</div>
 
-  <div class="field">
-    <%= form.label :lyrics %>
-    <%= form.text_area :lyrics %>
-  </div>
+<a href="https://developer.spotify.com/documentation/widgets/generate/play-button/" target="_blank">TO GET SPOTIFY LINK</a>
+<div class="field">
+  <%= form.label :spotify_link %>
+  <%= form.text_field :spotify_link %>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="field">
+  <%= form.label :lyrics %>
+  <%= form.text_area :lyrics %>
+</div>
+
+<div class="actions">
+  <%= form.submit %>
+</div>
 <% end %>

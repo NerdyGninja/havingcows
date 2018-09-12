@@ -24,7 +24,6 @@
 function openNav() {
   document.getElementById("overlay-nav").style.height = "100%";
 }
-
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
   document.getElementById("overlay-nav").style.height = "0%";
@@ -35,6 +34,12 @@ function closeNav() {
 ****************************************/
 $(document).on('turbolinks:load', function() {
 
+
+
+// BOOTSTRAP 4 TOOLTIPS
+$('[data-toggle="tooltip"]').tooltip();
+
+// YOUTUBE MODAL 
 autoPlayYouTubeModal();
 
   //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
