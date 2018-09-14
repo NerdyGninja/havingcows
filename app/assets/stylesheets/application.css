@@ -18,6 +18,10 @@
 ***************Typography****************
 ****************************************/
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #FFF;
 }
@@ -116,7 +120,7 @@ a:hover {
 }
 
 /* The navigation links inside the overlay */
-.overlay a {
+.overlay .link {
   padding: 8px;
   text-decoration: none;
   font-size: 1.5em;
@@ -126,7 +130,7 @@ a:hover {
 }
 
 /* When you mouse over the navigation links, change their color */
-.overlay .link:hover, .overlay a:focus {
+.overlay .link:hover, .overlay .link:focus {
   color: #FFAAAA;
   text-decoration: line-through;
 }
@@ -168,7 +172,6 @@ a:hover {
 
 .fab:hover {
   text-decoration: none;
-  opacity: 0.7;
 }
 
 .fa-facebook-f:hover {
@@ -187,14 +190,13 @@ a:hover {
   color: #1BC8FE;
 }
 
-.fa-twitter:hover {
-  color: #17A3F2;
-}
-
-.fa-soundcloud:hover {
-  color: #FF8C33;
-}
-
 .fa-youtube:hover {
   color: #FF0000;
+}
+
+.deezer {
+  position: relative;
+  padding-top: 30px;
+  bottom: 5px;
+  right: -15px;
 }

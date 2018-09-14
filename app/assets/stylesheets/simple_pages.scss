@@ -8,18 +8,22 @@
 /////////////////////////////////////////
 
 #landing-img {
-	height: 100vh;
-	width: 100vw;
+	height: auto;
+	width: 100%;
 }
 
 
 ////////////PARALLAX BACKGROUNDS////////////
-#parallax-biography {
+/* #parallax-biography {
 	background-image: asset-url('having-cows-parallax-biography.jpg');
-}
+} */
 
 #parallax-discography {
 	background-image: asset-url('having-cows-parallax-discography.jpg');
+}
+
+#parallax-gallery {
+  background-image: asset-url('having-cows-parallax-gallery.jpg');
 }
 
 #parallax-videos {
@@ -153,6 +157,11 @@
   text-align: center;
   font-family: 'Megrim', cursive;
 }
+
+////////////////////////
+////////GALLERY/////////
+////////////////////////
+
 
 ////////////////////////
 ////////VIDEOS//////////

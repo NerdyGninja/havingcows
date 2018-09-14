@@ -34,6 +34,15 @@ function closeNav() {
 ****************************************/
 $(document).on('turbolinks:load', function() {
 
+// CHANGE DEEZER ICON ON HOVER
+// mouse enter
+$(".deezer img").mouseenter(function(){       
+  $(this).attr('src','deezer-colour.png');      
+}); 
+// mouse leave    
+$(".deezer img").mouseleave(function(){       
+  $(this).attr('src','deezer-monotone.png');      
+});
 
 
 // BOOTSTRAP 4 TOOLTIPS
@@ -44,15 +53,15 @@ autoPlayYouTubeModal();
 
   //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
   function autoPlayYouTubeModal() {
-      var trigger = $("body").find('[data-toggle="modal"]');
-      trigger.click(function () {
-          var theModal = $(this).data("target"),
-              videoSRC = $(this).attr("data-theVideo"),
-              videoSRCauto = videoSRC + "?autoplay=1";
-          $(theModal + ' iframe').attr('src', videoSRCauto);
-          $(theModal + ' button.close').click(function () {
-              $(theModal + ' iframe').attr('src', videoSRC);
-          });
+    var trigger = $("body").find('[data-toggle="modal"]');
+    trigger.click(function () {
+      var theModal = $(this).data("target"),
+      videoSRC = $(this).attr("data-theVideo"),
+      videoSRCauto = videoSRC + "?autoplay=1";
+      $(theModal + ' iframe').attr('src', videoSRCauto);
+      $(theModal + ' button.close').click(function () {
+        $(theModal + ' iframe').attr('src', videoSRC);
       });
+    });
   }
 });

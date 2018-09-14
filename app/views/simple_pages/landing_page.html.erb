@@ -1,15 +1,15 @@
 <section id="landing-page-section">
   <!-- background image for landing page -->
-  <%= image_tag ('having-cows-jumbotron-no-filter.jpg'), id: 'landing-img', class: 'img-fluid' %>
+  <%= image_tag ('having-cows-jumbotron.jpg'), id: 'landing-img', class: 'img-fluid' %>
 </section>
 
 <section id="biography-section">
-  <div id="parallax-biography" class="parallax">
-    <!-- background for the paralax effect -->
+  <!-- <div id="parallax-biography" class="parallax">
+    background for the paralax effect
     <div class="parallax-header text-center">
-      <h1>BIOGRAPHY</h1>
+      <h1>THE BAND</h1>
     </div>
-  </div>
+  </div> -->
 
   <div class="container">
     <div class="biography-text">
@@ -105,6 +105,19 @@
     </div> <!-- end row -->
   </div> <!-- end container img-grid-container-->
 </section> <!-- end discography section -->
+
+<section id="gallery-section">
+  <div id="parallax-gallery" class="parallax">
+    <!-- background for the paralax effect -->
+    <div class="parallax-header text-center">
+      <h1>Gallery</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+    </div>
+</section> <!-- end gallery section -->
 
 <section>
   <div id="parallax-videos" class="parallax">
@@ -237,10 +250,10 @@
       <span class="sr-only">Next</span>
     </a>
   </div> <!-- end carousel -->
-<br>
+  <br>
   <div class="text-center">
     <%= link_to merchandises_url do %>
-      <button class="btn btn-custom">SHOP ALL</button>
+    <button class="btn btn-custom">SHOP ALL</button>
     <% end %>
   </div>
 </section> <!-- end merchandise section -->
@@ -256,15 +269,23 @@
   <div class="container">
     <div class="contact-form">
       <%= flash[:notice] %>
+
       <%= form_tag("/simple_pages/thank_you") do |form| %>
       <div class="form-group">
         <%= label_tag :name, "Name", class: "sr-only" %>
         <%= text_field_tag :name, nil, class: "form-control", placeholder: "Name" %>
       </div> <!-- end form-group -->
+
       <div class="form-group">
         <%= label_tag :email, "Email Address", class: "sr-only" %>
         <%= text_field_tag :email, nil, class: "form-control", placeholder: "Email Address" %>
       </div>
+
+      <div class="form-group">
+        <%= label_tag :name, "Telephone Number", class: "sr-only" %>
+        <%= text_field_tag :tel, nil, class: "form-control", placeholder: "Contact Number: Eg. 081 2345 678" %>
+      </div> <!-- end form-group -->
+
       <div class="form-group">
         <%= label_tag :message, "Message", class: "sr-only" %>
         <%= text_area_tag :message, nil, class: "form-control", placeholder: "Give us your thoughts..." %>
