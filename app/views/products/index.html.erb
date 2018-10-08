@@ -1,0 +1,23 @@
+<div class="clearNav"></div>
+<div class="container">
+  <div class="text-center">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Merch</h1>
+    <br>
+    <div class="row">
+      <% @products.each do |product| %>
+      <div class="col-sm-6 col-md-4">
+        <%= link_to image_tag(product.img_url, class: 'img-fluid poster'), product %>
+        <h4><%= product.name %></h4>
+        <h5>R<%= product.price %></h5>
+        <hr>
+        <%= link_to 'Edit', edit_product_path(product) %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      <% end %>
+    </div>
+<br>
+
+<%= link_to 'New Product', new_product_path %>
+</div> <!-- end container -->

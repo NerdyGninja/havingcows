@@ -234,54 +234,7 @@
 </section> <!-- end events section -->
 <br>
 
-<section id="merch-section">
-  <div id="parallax-merch" class="parallax">
-    <!-- background for the paralax effect -->
-    <div class="parallax-header text-center">
-      <h1>MERCH</h1>
-    </div>
-  </div>
 
-  <div class="carousel slide" id="discography-carousel" data-ride="carousel" data-interval="3000" data-pause="hover">
-    <div class="carousel-inner">
-
-      <!-- CAROUSEL INDICATORS -->
-      <ol class="carousel-indicators">
-        <% @featured_merchandises.each_with_index do |merchandise, i| %>
-        <li data-target="discography-carousel" data-slide-to="<%= i %>"" class="<%= "active" if i == 0 %>">
-        </li>
-        <% end %>
-      </ol>
-
-      <!-- WRAPPER FOR SLIDES -->
-      <% @featured_merchandises.each do |merchandise| %>
-      <div class="carousel-item <%= "active" if merchandise == @featured_merchandises.first %>">
-        <%= link_to image_tag(merchandise.image_url, class: 'd-block img-fluid', alt: 'carousel'), merchandise %>
-      </div>
-      <div class="carousel-caption">
-        <h4><%= merchandise.name %></h4>
-        <p>R <%= merchandise.price %></p>
-      </div>
-      <% end %>
-    </div>
-
-    <!-- CAROUSEL CONTROLS -->
-    <a class="carousel-control carousel-control-prev" href="#discography-carousel" role="button" data-slide="prev">
-      <span class="carousel-control-icon carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control carousel-control-next" href="#discography-carousel" role="button" data-slide="next">
-      <span class="carousel-control-icon carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div> <!-- end carousel -->
-  <br>
-  <div class="text-center">
-    <%= link_to merchandises_url do %>
-    <button class="btn btn-custom">SHOP ALL</button>
-    <% end %>
-  </div>
-</section> <!-- end merchandise section -->
 <br>
 <section id="contact-section">
   <div id="parallax-contact" class="parallax">

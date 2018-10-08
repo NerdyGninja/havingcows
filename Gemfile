@@ -38,6 +38,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails'
 # Redcarpet required for markdown
 gem 'redcarpet'
+# Devise for Authentication
+gem 'devise'
+
 group :production do
 	gem 'pg', '~> 0.20'
 end

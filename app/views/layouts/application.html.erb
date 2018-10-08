@@ -4,11 +4,15 @@
   <%= render 'layouts/head' %>
 
   <body>
+  
+    <%= render 'layouts/nav' %>
 
-      <%= render 'layouts/nav' %>
-      <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-  <%= render 'layouts/footer' %>
+    <%= yield %>
+
+    <%= render 'layouts/footer' %>
   
 <script>
   AOS.init();
