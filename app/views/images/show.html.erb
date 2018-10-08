@@ -1,0 +1,20 @@
+<div class="clearNav"></div>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= image_tag (@image.image_url), class: 'img-fluid' %>
+</p>
+
+<p>
+  <strong>Image name:</strong>
+  <%= @image.image_name %>
+</p>
+
+<p>
+  <strong>Image description:</strong>
+  <%= @image.image_description %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

@@ -115,49 +115,74 @@
   </div>
 
   <div class="container-fluid">
-    <div class="row">
-    </div>
-</section> <!-- end gallery section -->
 
-<section>
-  <div id="parallax-videos" class="parallax">
-    <!-- background for the paralax effect -->
-    <div class="parallax-header text-center">
-      <h1>VIDEOS</h1>
-    </div>
-  </div>
+    <br>
 
-  <div class="container img-grid-container">
     <div class="row">
-      <% @featured_videos.each do |video| %>
-      <div class="col-xs-6 col-md-4 img-grid wrapper">
-        <%= image_tag (video.image), class: 'img-fluid video-image' %>
-        <div class="image-overlay">
-          <div class="text-overlay">
-            <!-- MODAL TRIGGER -->
-            <span class="far fa-play-circle" data-toggle="modal" data-target="#videoModal" data-theVideo="<%= video.youtube_link %>"></span>
-            <p><%= video.name %></p>
+      <% @featured_images.each do |image| %>
+      <div class="d-flex flex-wrap m-auto">
+        <%= link_to image_tag(image.image_url, class: "img-fluid gallery-image"), data: {toggle: 'modal', target: '#image-modal'} %>
+      </div>
+      
+
+      <div class="modal hide fade" id="image-modal" title="image-modal">
+        <div class="modal-header">
+          <button aria-hidden="true" class="btn btn-danger" data-dismiss="modal" type="button">&times;</button>
+          <h3><%= image.image_name %></h3>
+        </div>
+        <div class="modal-body">
+          <%= image.image_url %>
+        </div>
+        <div class="modal-footer">
+          <%= image.image_description %>
+        </div>
+        </div>
+    <% end %>
+      </div> <!-- end row -->
+    </div> <!-- end container -->
+  </section> <!-- end gallery section -->
+
+  <br>
+
+  <section>
+    <div id="parallax-videos" class="parallax">
+      <!-- background for the paralax effect -->
+      <div class="parallax-header text-center">
+        <h1>VIDEOS</h1>
+      </div>
+    </div>
+
+    <div class="container img-grid-container">
+      <div class="row">
+        <% @featured_videos.each do |video| %>
+        <div class="col-xs-6 col-md-4 img-grid wrapper">
+          <%= image_tag (video.image), class: 'img-fluid video-image' %>
+          <div class="image-overlay">
+            <div class="text-overlay">
+              <!-- MODAL TRIGGER -->
+              <span class="far fa-play-circle" data-toggle="modal" data-target="#videoModal" data-theVideo="<%= video.youtube_link %>"></span>
+              <p><%= video.name %></p>
+            </div>
           </div>
         </div>
-      </div>
-      <% end %>
+        <% end %>
 
-      <!-- MODAL -->
-      <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <div>
-                <iframe width="100%" height="350" src=""></iframe>
+        <!-- MODAL -->
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div>
+                  <iframe width="100%" height="350" src=""></iframe>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div> <!-- end modal -->
-  </div> <!-- end row -->
-</div> <!-- end container img-grid-container-->
+      </div> <!-- end modal -->
+    </div> <!-- end row -->
+  </div> <!-- end container img-grid-container-->
 </section> <!-- end videos section -->
 
 <section id="events-section">
