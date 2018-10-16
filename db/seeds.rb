@@ -17,3 +17,5 @@ Product.create(name: "Product number 7", description: "Eighth Seeded Product!", 
 Product.create(name: "Product number 8", description: "Nineth Seeded Product!", price: "14.25", img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83_t_x7tsPJuDTDr-ki38X9wMJAP7sFDTq_aql1FmDpmqEnlRng")
 Product.create(name: "Product number 9", description: "Tenth Seeded Product!", price: "14.25", img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiaLVfLSPZLpBH2tsa4VixZh4guECGYxUYSOfgwcDWzi-BZHfp")
 
+Order.create(user_id: 1, product_id: 1, total: 10.0)
+Order.create(user_id: 1, product_id: 2, total: 5.0)
