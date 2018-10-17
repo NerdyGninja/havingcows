@@ -1,6 +1,19 @@
 <nav class="navbar navbar-light navbar-expand-xs fixed-top">
   <!-- Brand -->
   <%= link_to image_tag('having-cows-logo.png'), root_path, class: 'navbar-brand' %>
+  <div class="text-center">
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link link' %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to 'Login', new_user_session_path, class: 'nav-link link' %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
 
   <!-- Toggler -->
   <span class="navbar-toggler-icon" onclick="openNav()"></span>
