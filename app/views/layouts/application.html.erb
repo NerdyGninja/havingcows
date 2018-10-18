@@ -6,9 +6,15 @@
   <body>
   
     <%= render 'layouts/nav' %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
+    <div class="system-notifications text-center">
+      <% if notice %>
+        <p id="notice" class="alert alert-primary"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p id="alert" class="alert alert-danger"><%= alert %></p>
+      <% end %>
+    </div>
 
     <%= yield %>
 

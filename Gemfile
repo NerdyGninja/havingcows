@@ -40,6 +40,8 @@ gem 'jquery-rails'
 gem 'redcarpet'
 # Devise for Authentication
 gem 'devise'
+# CanCanCan for authorization
+gem 'cancancan', '~> 1.10'
 
 group :production do
 	gem 'pg', '~> 0.20'

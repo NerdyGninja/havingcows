@@ -34,16 +34,8 @@ function closeNav() {
 ****************************************/
 $(document).on('turbolinks:load', function() {
 
-// CHANGE DEEZER ICON ON HOVER
-// mouse enter
-$(".deezer img").mouseenter(function(){       
-  $(this).attr('src','deezer-colour.png');      
-}); 
-// mouse leave    
-$(".deezer img").mouseleave(function(){       
-  $(this).attr('src','deezer-monotone.png');      
-});
-
+  /* Fade alerts and notices */
+$('.system-notifications').delay(2000).fadeOut(5000);
 
 // BOOTSTRAP 4 TOOLTIPS
 $('[data-toggle="tooltip"]').tooltip();

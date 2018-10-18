@@ -7,11 +7,20 @@
 ////////////////TYPOGRAPHY////////////////
 /////////////////////////////////////////
 
-#landing-img {
-	height: auto;
-	width: 100%;
+#landing-page-section {
+  height: 100vh;
+  width: 100%;
+	background-image: asset-url('having-cows-jumbotron.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+/* When the width of the screen is less than 719 pixels, change the background-size property, so the whole picture displays  */
+@media screen and (max-width: 720px) {
+  #landing-page-section {
+  background-size: contain;
+  }
+}
 
 ////////////PARALLAX BACKGROUNDS////////////
 /* #parallax-biography {
